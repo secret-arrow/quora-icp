@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "quora-icp-backend": {
+      "candid": "src/quora-icp-backend/quora-icp-backend.did",
+      "package": "quora-icp-backend",
+      "type": "rust"
+    },
+    "quora-icp-frontend": {
+      "dependencies": [
+        "quora-icp-backend"
+      ],
+      "source": [
+        "src/quora-icp-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "quora-icp-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
